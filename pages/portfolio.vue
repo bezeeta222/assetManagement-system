@@ -54,10 +54,7 @@ const total = computed(() => {
 
 <template>
   <UContainer class="py-8 w-full space-y-10">
-    <PageTitle
-      name="Portfolio"
-      description="See and manage your current portfolio."
-    />
+    <PageTitle name="Portfolio" description="" />
 
     <NumberDisplay label="Total Investment (MYR)" :value="total.toFixed(2)" />
 
@@ -70,13 +67,15 @@ const total = computed(() => {
             {{ formatDate(getRowData(), { time: true }) }}
           </template>
 
+          <template #units-data="{ row, getRowData }">
+            <UBadge color="blue">
+              {{ row.units }}
+            </UBadge>
+          </template>
+
+
           <template #fund-data="{ row, getRowData }">
-            <UButton
-              variant="link"
-              :to="`/fund/${getRowData().id}`"
-              color="black"
-              class="px-0"
-            >
+            <UButton variant="link" :to="`/fund/${getRowData().id}`" color="black" class="px-0">
               {{ getRowData().name }}
             </UButton>
           </template>

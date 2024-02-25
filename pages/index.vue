@@ -7,11 +7,8 @@ const { signOut, session, status, cookies } = useAuth()
 <template>
   <UContainer class="py-8 w-full">
     <div class="space-y-2 mb-8">
-      <h1 class="font-bold font-display text-4xl md:text-6xl">List of Funds</h1>
+      <h1 class="font-bold font-display text-4xl md:text-6xl">Fund List</h1>
 
-      <p class="text-secondary">
-        Manage your funds and track their performance.
-      </p>
     </div>
 
     <FundsTable />

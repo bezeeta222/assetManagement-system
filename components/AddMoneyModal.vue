@@ -57,7 +57,7 @@ function onModalChange(value: boolean) {
     size="xl"
     label="Add Money"
     block
-    color="black"
+    color="blue"
     @click="isOpen = true"
   />
 

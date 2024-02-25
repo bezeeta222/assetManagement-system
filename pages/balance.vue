@@ -24,22 +24,18 @@ const columns = [
   },
 ]
 
+
 const rows = computed(() => history.value ?? [])
+
+
 </script>
 
 <template>
   <UContainer class="py-8 w-full flex-1 space-y-10">
-    <PageTitle
-      name="Account Balance"
-      description="Manage your account balance."
-    />
+    <PageTitle name="Account Balance" description="" />
 
     <div class="space-y-4">
-      <NumberDisplay
-        label="Wallet Balance (MYR)"
-        :value="abbreviateNumber(balance ?? 0)"
-      />
-
+      <NumberDisplay label="Wallet Balance (MYR)" :value="abbreviateNumber(balance ?? 0)" />
       <AddMoneyModal />
     </div>
 
@@ -47,6 +43,9 @@ const rows = computed(() => history.value ?? [])
       <UTableWrapper class="[&_table_th]:whitespace-nowrap">
         <UTable :columns="columns" :rows="rows">
           <template #createdAt-data="{ getRowData }">
+            {{ formatDate(getRowData(), { time: true }) }}
+          </template>
+          <template #amount-data="{ getRowData }">
             {{ formatDate(getRowData(), { time: true }) }}
           </template>
         </UTable>

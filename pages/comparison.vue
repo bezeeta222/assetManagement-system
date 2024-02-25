@@ -45,15 +45,6 @@ const columns = computed(() => {
   )
 })
 
-/**
- * 1. Description
- * 2. Ticker
- * 3. Current NAV
- * 4. Current YTD
- * 5. Investment Type
- * 6. Is Shariah
- * 7. Inception Date
- */
 const rows = computed(() => {
   if (!funds.value) {
     return []

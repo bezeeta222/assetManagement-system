@@ -40,13 +40,15 @@ const rows = computed(() => {
           {{ formatDate(getRowData(), { time: true }) }}
         </template>
 
+        <template #units-data="{ row, getRowData }">
+          <UBadge color="blue">
+            {{ row.units }}
+          </UBadge>
+        </template>
+
+
         <template #fund-data="{ row, getRowData }">
-          <UButton
-            variant="link"
-            :to="`/fund/${getRowData().id}`"
-            color="black"
-            class="px-0"
-          >
+          <UButton variant="link" :to="`/fund/${getRowData().id}`" color="black" class="px-0">
             {{ getRowData().name }}
           </UButton>
         </template>

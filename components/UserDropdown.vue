@@ -1,9 +1,6 @@
 <template>
   <UDropdown :items="items" :popper="{ placement: 'bottom-end' }">
-    <UAvatar
-      :src="session?.user?.image ?? undefined"
-      :alt="session?.user?.name ?? undefined"
-    />
+    <UAvatar :src="session?.user?.image ?? undefined" :alt="session?.user?.name ?? undefined" />
   </UDropdown>
 </template>
 
@@ -32,7 +29,14 @@ const items = [
       icon: "i-heroicons-wallet-20-solid",
       to: "/balance",
     },
+    {
+      label: "Compare Fund",
+      icon: "i-heroicons-arrows-right-left-20-solid",
+      to: "/comparison",
+    },
+
   ],
+
   [
     {
       label: "Sign Out",
@@ -40,5 +44,6 @@ const items = [
       click: () => signOut(),
     },
   ],
+
 ]
 </script>

@@ -13,25 +13,19 @@
             :padded="false"
           >
             <span>
-              📈 Fund <span class="hidden md:inline">Management</span
-              ><span class="md:hidden">Mgt</span> System
+              Idham Broker
             </span>
           </UButton>
         </div>
 
         <nav class="space-x-6 hidden md:block">
-          <ULink to="/portfolio" class="text-xs text-muted">Portfolio</ULink>
-          <ULink to="/balance" class="text-xs text-muted"
-            >Account Balance</ULink
-          >
-          <ULink to="/comparison" class="text-xs text-muted">Comparison</ULink>
         </nav>
       </div>
 
       <div class="flex items-center gap-x-1">
         <UButton
           external
-          to="https://github.com/haikhalfakhreez/fund-management-system"
+          to="https://github.com/bezeeta222/assetManagement-system.git"
           target="_blank"
           color="gray"
           variant="ghost"
