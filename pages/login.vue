@@ -16,14 +16,12 @@ const { signIn } = useAuth()
           Login or register your account
         </h1>
 
-        <UButton
-          @click="signIn('github')"
-          color="black"
-          size="lg"
-          icon="i-mdi-github"
-          block
-        >
+        <UButton @click="signIn('github')" color="black" size="lg" icon="i-mdi-github" block class="mb-4">
           Sign in with GitHub
+        </UButton>
+
+        <UButton @click="signIn('google')" color="black" size="lg" icon="i-mdi-google" block class="mb-4">
+          Sign in with Google
         </UButton>
       </UCard>
     </UContainer>

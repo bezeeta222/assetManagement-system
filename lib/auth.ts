@@ -1,4 +1,6 @@
 import GithubProvider from "@auth/core/providers/github"
+import GoogleProvider from "@auth/core/providers/google"
+
 import type { AuthConfig } from "@auth/core/types"
 import { DrizzleAdapter } from "@auth/drizzle-adapter"
 
@@ -11,6 +13,10 @@ export const authOptions: AuthConfig = {
     GithubProvider({
       clientId: runtimeConfig.github.clientId,
       clientSecret: runtimeConfig.github.clientSecret,
+    }),
+    GoogleProvider({
+      clientId: runtimeConfig.google.clientId,
+      clientSecret: runtimeConfig.google.clientSecret,
     }),
   ],
   callbacks: {
