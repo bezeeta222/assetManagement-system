@@ -2,7 +2,7 @@ import { resolve } from "node:path"
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     "@hebilicious/authjs-nuxt",
     "@nuxtjs/fontaine",
@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     public: {
       authJs: {
         baseUrl: process.env.NEXTAUTH_URL,
-        verifyClientOnEveryRequest: true,
+        verifyClientOnEveryRequest: false,
       },
     },
   },
