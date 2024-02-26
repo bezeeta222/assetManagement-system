@@ -103,4 +103,3 @@ pnpm run db:all
 
 ```
 
-## deployment is not in the requirement 
